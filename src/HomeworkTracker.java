@@ -16,8 +16,13 @@ public class HomeworkTracker {
         public String getProgress() {
             return "total: " + total + "completed: " + completed;
         }
-        public int getCompleted() {
-            return completed;
+        public boolean isDone() {
+            if (total == 0) {
+                return true;
+            }
+            else {
+                return false;
+            }
         }
 
         public void completeProblems(HomeworkTracker a, int numCompleted){
