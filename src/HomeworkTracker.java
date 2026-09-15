@@ -14,7 +14,7 @@ public class HomeworkTracker {
             return "total: " + total + "completed: " + completed;
         }
         public boolean isDone() {
-            if (total == 0) {
+            if(total == 0) {
                 return true;
             }
             else {
