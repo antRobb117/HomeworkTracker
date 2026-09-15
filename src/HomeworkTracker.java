@@ -13,12 +13,12 @@ public class HomeworkTracker {
         public String getProgress() {
             return "Subject: " + name + " | Total: " + assigned + " | Completed: " + completed;
         }
-        public boolean isDone() {
+        public String isDone() {
             if(assigned == 0) {
-                return true;
+                return "All Assignments Are Completed for " + name;
             }
             else {
-                return false;
+                return "You still have " + assigned + " assignments for " + name;
             }
         }
 
@@ -41,6 +41,10 @@ public class HomeworkTracker {
         a.completeProblems(a, 2);
         System.out.println(a.getProgress());
         System.out.println(b.getProgress());
+        b.completeProblems(b, 12);
+        System.out.println(b.isDone());
+        System.out.println(a.isDone());
+
     }
 }
 
