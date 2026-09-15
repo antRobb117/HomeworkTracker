@@ -10,9 +10,6 @@ public class HomeworkTracker {
             this.completed = completed;
         }
 
-        public String getName() {
-            return name;
-        }
         public String getProgress() {
             return "total: " + total + "completed: " + completed;
         }
