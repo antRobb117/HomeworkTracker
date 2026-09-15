@@ -5,7 +5,7 @@ public class HomeworkTracker {
         private int completed;
 
         public HomeworkTracker(String name, int total, int completed) {
-            this.name = name;
+            name = name;
             this.total = total;
             this.completed = completed;
         }
@@ -13,8 +13,8 @@ public class HomeworkTracker {
         public String getName() {
             return name;
         }
-        public int getTotal() {
-            return total;
+        public String getProgress() {
+            return "total: " + total + "completed: " + completed;
         }
         public int getCompleted() {
             return completed;
@@ -35,7 +35,7 @@ public class HomeworkTracker {
     public static void main(String[] args) {
         HomeworkTracker a = new HomeworkTracker("History", 10, 1);
         a.completeProblems(a, 2);
-        System.out.println(a.getTotal());
+        System.out.println(a.getProgress());
     }
 }
 
