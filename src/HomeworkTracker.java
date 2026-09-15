@@ -10,26 +10,32 @@ public class HomeworkTracker {
             this.completed = completed;
         }
 
+        public String getName() {
+            return name;
+        }
+        public int getTotal() {
+            return total;
+        }
+        public int getCompleted() {
+            return completed;
+        }
+
         public void completeProblems(HomeworkTracker a, int numCompleted){
 
             if(numCompleted <= a.total) {
-
                 a.completed += numCompleted;
                 a.total -= numCompleted;
-
-
             }
             else{
-
                 a.total = 0;
-
             }
 
         }
 
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-        System.out.println("Hello world!");
+        HomeworkTracker a = new HomeworkTracker("History", 10, 1);
+        a.completeProblems(a, 2);
+        System.out.println(a.getTotal());
     }
 }
 
