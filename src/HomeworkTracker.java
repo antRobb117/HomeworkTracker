@@ -36,8 +36,11 @@ public class HomeworkTracker {
 
     public static void main(String[] args) {
         HomeworkTracker a = new HomeworkTracker("History", 10, 1);
+        HomeworkTracker b = new HomeworkTracker("Math", 15, 4);
+        b.completeProblems(b, 3);
         a.completeProblems(a, 2);
         System.out.println(a.getProgress());
+        System.out.println(b.getProgress());
     }
 }
 
