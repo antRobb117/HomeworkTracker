@@ -1,20 +1,20 @@
 public class HomeworkTracker {
 
         private String name;
-        private int total;
+        private int assigned;
         private int completed;
 
         public HomeworkTracker(String name, int total, int completed) {
-            name = name;
-            this.total = total;
+            this.name = name;
+            this.assigned = total;
             this.completed = completed;
         }
 
         public String getProgress() {
-            return "Subject: " + name + " | Total: " + total + " | Completed: " + completed;
+            return "Subject: " + name + " | Total: " + assigned + " | Completed: " + completed;
         }
         public boolean isDone() {
-            if(total == 0) {
+            if(assigned == 0) {
                 return true;
             }
             else {
@@ -24,12 +24,12 @@ public class HomeworkTracker {
 
         public void completeProblems(HomeworkTracker a, int numCompleted){
 
-            if(numCompleted <= a.total) {
+            if(numCompleted <= a.assigned) {
                 a.completed += numCompleted;
-                a.total -= numCompleted;
+                a.assigned -= numCompleted;
             }
             else{
-                a.total = 0;
+                a.assigned = 0;
             }
 
         }
